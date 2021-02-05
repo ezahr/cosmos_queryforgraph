@@ -93,7 +93,7 @@ g.addV('person').property('firstName', 'Debbie').property('lastName', 'Stevens')
 
 ````
 g.V().hasLabel('person').has('firstName', 'Will').addE('knows').to(g.V().hasLabel('person').has('firstName', 'Alex'))
-
+g.V().hasLabel('person').has('firstName', 'Alex').addE('knows').to(g.V().hasLabel('person').has('firstName', 'Mike'))
 
 ````
 
@@ -118,8 +118,6 @@ g.V().hasLabel('person').has('firstName', 'Will').addE('knows').to(g.V().hasLabe
 
 ```
 g.V().hasLabel('person').has('firstName', 'Alex').addE('knows').to(g.V().hasLabel('person').has('firstName', 'Mike'))
-g.V().hasLabel('person').has('firstName', 'Alex').addE('knows').to(g.V().hasLabel('person').has('firstName', 'Mike'))
-
 
 ```
 
