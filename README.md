@@ -3,7 +3,7 @@
 
 ## azure-cosmos-db-create-graph-dotnet
 
-
+![hoeken en randen](.//pictures/hello_vertexes_and_edges_nice_to_see_you_55.png)
 
 [azure-cosmos-db-create-graph-dotnet](https://docs.microsoft.com/en-us/azure/cosmos-db/create-graph-dotnet)
 
@@ -12,7 +12,7 @@ https://github.com/Azure-Samples/azure-cosmos-db-graph-gremlindotnet-getting-sta
 
 ## git
 
-|I||git clone|
+|I|git clone|
 |----|-------------------------|
 |ssh|git@github.com:ezahr/cosmos_queryforgraph.git|
 |http| https://github.com/ezahr/cosmos_queryforgraph.git |
