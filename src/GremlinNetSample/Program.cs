@@ -1,4 +1,5 @@
 ﻿
+// [azure-cosmos-db-create-graph-dotnet](https://docs.microsoft.com/en-us/azure/cosmos-db/create-graph-dotnet)
 using System;
 using System.Collections.Generic;
 using System.Net.WebSockets;
@@ -72,36 +73,37 @@ namespace GremlinNetSample
         // <defineQueries>
         private static Dictionary<string, string> gremlinQueries = new Dictionary<string, string>
         {
-            { "Cleanup",        "g.V().drop()" },
-
-             { "AddVertex 1",     "g.addV('person').property('firstName', 'Will').property('lastName', 'Velida').property('age', 28).property('hairColor', 'blonde').property('userId', 1).property('pk', 'pk')" },
-             { "AddVertex 2",     "g.addV('person').property('firstName', 'Alex').property('lastName', 'Smith').property('age', 22).property('hairColor', 'brown').property('userId', 2).property('pk', 'pk')" },
-             { "AddVertex 3",     "g.addV('person').property('firstName', 'Mike').property('lastName', 'Jones').property('hairColor', 'black').property('userId', 2).property('pk', 'pk')" },
-             { "AddVertex 4",     "g.addV('person').property('firstName', 'Sarah').property('lastName', 'Smith').property('hairColor', 'blonde').property('userId', 4).property('pk', 'pk')" },
-             { "AddVertex 5",     "g.addV('person').property('firstName', 'Debbie').property('lastName', 'Stevens').property('hairColor', 'black').property('age', 57).property('userId', 5).property('pk', 'pk')" },
-           //  { "AddEdge 1",       "g.V().hasLabel('person').has('firstName', 'Will').addE('knows').to(g.V().hasLabel('person').has('firstName', 'Alex'))" },
+             { "Cleanup",        "g.V().drop()" },
+        //     { "AddVertex 1",     "g.addV('person').property('firstName', 'Will').property('lastName', 'Velida').property('age', 28).property('hairColor', 'blonde').property('userId', 1).property('pk', 'pk')" },
+        //     { "AddVertex 2",     "g.addV('person').property('firstName', 'Alex').property('lastName', 'Smith').property('age', 22).property('hairColor', 'brown').property('userId', 2).property('pk', 'pk')" },
+        //     { "AddVertex 3",     "g.addV('person').property('firstName', 'Mike').property('lastName', 'Jones').property('hairColor', 'black').property('userId', 2).property('pk', 'pk')" },
+        //     { "AddVertex 4",     "g.addV('person').property('firstName', 'Sarah').property('lastName', 'Smith').property('hairColor', 'blonde').property('userId', 4).property('pk', 'pk')" },
+        //     { "AddVertex 5",     "g.addV('person').property('firstName', 'Debbie').property('lastName', 'Stevens').property('hairColor', 'black').property('age', 57).property('userId', 5).property('pk', 'pk')" },
+            // { "AddEdge 1",       "g.V().hasLabel('person').has('firstName', 'Will').addE('knows').to(g.V().hasLabel('person').has('firstName', 'Alex'))" },
             // { "AddEdge 2",       "g.V().hasLabel('person').has('firstName', 'Alex').addE('knows').to(g.V().hasLabel('person').has('firstName', 'Mike')" },
        
         
 
-      //      { "AddVertex 1",    "g.addV('person').property('id', 'thomas').property('firstName', 'Thomas').property('age', 44).property('pk', 'pk')" },
-      //      { "AddVertex 2",    "g.addV('person').property('id', 'mary').property('firstName', 'Mary').property('lastName', 'Andersen').property('age', 39).property('pk', 'pk')" },
-      //      { "AddVertex 3",    "g.addV('person').property('id', 'ben').property('firstName', 'Ben').property('lastName', 'Miller').property('pk', 'pk')" },
-      //      { "AddVertex 4",    "g.addV('person').property('id', 'robin').property('firstName', 'Robin').property('lastName', 'Wakefield').property('pk', 'pk')" },
-      //      { "AddEdge 1",      "g.V('thomas').addE('knows').to(g.V('mary'))" },
-      //      { "AddEdge 2",      "g.V('thomas').addE('knows').to(g.V('ben'))" },
-      //      { "AddEdge 3",      "g.V('ben').addE('knows').to(g.V('robin'))" },
-       //     { "UpdateVertex",   "g.V('thomas').property('age', 44)" },
-       //     { "CountVertices",  "g.V().count()" },
-       //     { "Filter Range",   "g.V().hasLabel('person').has('age', gt(40))" },
-       //     { "Project",        "g.V().hasLabel('person').values('firstName')" },
-       //     { "Sort",           "g.V().hasLabel('person').order().by('firstName', decr)" },
-       //     { "Traverse",       "g.V('thomas').out('knows').hasLabel('person')" },
+            { "AddVertex 1",    "g.addV('person').property('id', 'thomas').property('firstName', 'Thomas').property('age', 44).property('pk', 'pk')" },
+            { "AddVertex 2",    "g.addV('person').property('id', 'mary').property('firstName', 'Mary').property('lastName', 'Andersen').property('age', 39).property('pk', 'pk')" },
+            { "AddVertex 3",    "g.addV('person').property('id', 'ben').property('firstName', 'Ben').property('lastName', 'Miller').property('pk', 'pk')" },
+            { "AddVertex 4",    "g.addV('person').property('id', 'robin').property('firstName', 'Robin').property('lastName', 'Wakefield').property('pk', 'pk')" },
+        //    { "AddEdge 1",      "g.V('thomas').addE('knows').to(g.V('mary'))" },
+        //    { "AddEdge 2",      "g.V('thomas').addE('knows').to(g.V('ben'))" },
+        //    { "AddEdge 3",      "g.V('ben').addE('knows').to(g.V('robin'))" },
+        //    { "UpdateVertex",   "g.V('thomas').property('age', 44)" },
+              { "CountVertices",  "g.V().count()" },
+              { "Filter Range",   "g.V().hasLabel('person').has('age', gt(40))" },
+              { "Project",        "g.V().hasLabel('person').values('firstName')" },
+         //     { "Traverse",       "g.V().hasLabel('person').has('firstName', 'Alex').outE('knows').inV().hasLabel('person')" },
+              { "Sort",           "g.V().hasLabel('person').order().by('firstName', decr)" },
+             // { "Traverse",       "g.V('thomas').out('knows').hasLabel('person')" },
+      //         { "Traverse",       "g.V('Alex').out('knows').hasLabel('person')" },
        //     { "Traverse 2x",    "g.V('thomas').out('knows').hasLabel('person').out('knows').hasLabel('person')" },
        //     { "Loop",           "g.V('thomas').repeat(out()).until(has('id', 'robin')).path()" },
        //     { "DropEdge",       "g.V('thomas').outE('knows').where(inV().has('id', 'mary')).drop()" },
        //     { "CountEdges",     "g.E().count()" },
-       //     { "DropVertex",     "g.V('thomas').drop()" },
+            { "DropVertex",     "g.V('thomas').drop()" },
         };
         // </defineQueries>
 
@@ -164,7 +166,7 @@ namespace GremlinNetSample
                     //  x-ms-status-code            : This is the sub-status code which is specific to Cosmos DB.
                     //  x-ms-total-request-charge   : The total request units charged for processing a request.
                     //  x-ms-total-server-time-ms   : The total time executing processing the request on the server.
-                    PrintStatusAttributes(resultSet.StatusAttributes);
+                    // ff niet PrintStatusAttributes(resultSet.StatusAttributes);
                     Console.WriteLine();
                 }
                 // </executeQueries>
@@ -194,9 +196,10 @@ namespace GremlinNetSample
                 //  x-ms-retry-after-ms         : The number of milliseconds to wait to retry the operation after an initial operation was throttled. This will be populated when
                 //                              : attribute 'x-ms-status-code' returns 429.
                 //  x-ms-activity-id            : Represents a unique identifier for the operation. Commonly used for troubleshooting purposes.
-                PrintStatusAttributes(e.StatusAttributes);
-                Console.WriteLine($"\t[\"x-ms-retry-after-ms\"] : { GetValueAsString(e.StatusAttributes, "x-ms-retry-after-ms")}");
-                Console.WriteLine($"\t[\"x-ms-activity-id\"] : { GetValueAsString(e.StatusAttributes, "x-ms-activity-id")}");
+               
+                 PrintStatusAttributes(e.StatusAttributes);
+                 Console.WriteLine($"\t[\"x-MS-retry-after-ms\"] : { GetValueAsString(e.StatusAttributes, "x-ms-retry-after-ms")}");
+                 Console.WriteLine($"\t[\"x-MS-activity-id\"] : { GetValueAsString(e.StatusAttributes, "x-ms-activity-id")}");
 
                 throw;
             }
