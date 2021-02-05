@@ -74,25 +74,23 @@ namespace GremlinNetSample
         {
             { "Cleanup",        "g.V().drop()" },
 
-        //     { "AddVertex 1",     "g.addV('person').property('firstName', 'Will').property('lastName', 'Velida').property('age', 28).property('hairColor', 'blonde').property('userId', 1).property('pk', 'pk')" },
-        //     { "AddVertex 2",     "g.addV('person').property('firstName', 'Alex').property('lastName', 'Smith').property('age', 22).property('hairColor', 'brown').property('userId', 2).property('pk', 'pk')" },
-        //     { "AddVertex 3",     "g.addV('person').property('firstName', 'Mike').property('lastName', 'Jones').property('hairColor', 'black').property('userId', 2).property('pk', 'pk')" },
+             { "AddVertex 1",     "g.addV('person').property('firstName', 'Will').property('lastName', 'Velida').property('age', 28).property('hairColor', 'blonde').property('userId', 1).property('pk', 'pk')" },
+             { "AddVertex 2",     "g.addV('person').property('firstName', 'Alex').property('lastName', 'Smith').property('age', 22).property('hairColor', 'brown').property('userId', 2).property('pk', 'pk')" },
+             { "AddVertex 3",     "g.addV('person').property('firstName', 'Mike').property('lastName', 'Jones').property('hairColor', 'black').property('userId', 2).property('pk', 'pk')" },
              { "AddVertex 4",     "g.addV('person').property('firstName', 'Sarah').property('lastName', 'Smith').property('hairColor', 'blonde').property('userId', 4).property('pk', 'pk')" },
-        //     { "AddVertex 5",     "g.addV('person').property('firstName', 'Debbie').property('lastName', 'Stevens').property('hairColor', 'black').property('age', 57).property('userId', 5).property('pk', 'pk')" },
-             
-             
-             //{ "AddEdge 1",       "g.V().hasLabel('person').has('firstName', 'Will').addE('knows').to(g.V().hasLabel('person').has('firstName', 'Alex'))" },
-             //{ "AddEdge 2",       "g.V().hasLabel('person').has('firstName', 'Alex').addE('knows').to(g.V().hasLabel('person').has('firstName', 'Mike')" },
-        //    { "AddEdge 1",      "g.V('thomas').addE('knows').to(g.V('mary'))" },
-        //    { "AddEdge 2",      "g.V('thomas').addE('knows').to(g.V('ben'))" },
+             { "AddVertex 5",     "g.addV('person').property('firstName', 'Debbie').property('lastName', 'Stevens').property('hairColor', 'black').property('age', 57).property('userId', 5).property('pk', 'pk')" },
+             { "AddEdge 1",       "g.V().hasLabel('person').has('firstName', 'Will').addE('knows').to(g.V().hasLabel('person').has('firstName', 'Alex'))" },
+             { "AddEdge 2",       "g.V().hasLabel('person').has('firstName', 'Alex').addE('knows').to(g.V().hasLabel('person').has('firstName', 'Mike')" },
+       
+        
 
-       //      { "AddVertex 1",    "g.addV('person').property('id', 'thomas').property('firstName', 'Thomas').property('age', 44).property('pk', 'pk')" },
-       //     { "AddVertex 2",    "g.addV('person').property('id', 'mary').property('firstName', 'Mary').property('lastName', 'Andersen').property('age', 39).property('pk', 'pk')" },
-       //     { "AddVertex 3",    "g.addV('person').property('id', 'ben').property('firstName', 'Ben').property('lastName', 'Miller').property('pk', 'pk')" },
-       //     { "AddVertex 4",    "g.addV('person').property('id', 'robin').property('firstName', 'Robin').property('lastName', 'Wakefield').property('pk', 'pk')" },
-       //     { "AddEdge 1",      "g.V('thomas').addE('knows').to(g.V('mary'))" },
-       //     { "AddEdge 2",      "g.V('thomas').addE('knows').to(g.V('ben'))" },
-       //     { "AddEdge 3",      "g.V('ben').addE('knows').to(g.V('robin'))" },
+      //      { "AddVertex 1",    "g.addV('person').property('id', 'thomas').property('firstName', 'Thomas').property('age', 44).property('pk', 'pk')" },
+      //      { "AddVertex 2",    "g.addV('person').property('id', 'mary').property('firstName', 'Mary').property('lastName', 'Andersen').property('age', 39).property('pk', 'pk')" },
+      //      { "AddVertex 3",    "g.addV('person').property('id', 'ben').property('firstName', 'Ben').property('lastName', 'Miller').property('pk', 'pk')" },
+      //      { "AddVertex 4",    "g.addV('person').property('id', 'robin').property('firstName', 'Robin').property('lastName', 'Wakefield').property('pk', 'pk')" },
+      //      { "AddEdge 1",      "g.V('thomas').addE('knows').to(g.V('mary'))" },
+      //      { "AddEdge 2",      "g.V('thomas').addE('knows').to(g.V('ben'))" },
+      //      { "AddEdge 3",      "g.V('ben').addE('knows').to(g.V('robin'))" },
        //     { "UpdateVertex",   "g.V('thomas').property('age', 44)" },
        //     { "CountVertices",  "g.V().count()" },
        //     { "Filter Range",   "g.V().hasLabel('person').has('age', gt(40))" },
