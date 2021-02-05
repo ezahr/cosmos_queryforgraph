@@ -90,20 +90,19 @@ namespace GremlinNetSample
             { "AddVertex 2",    "g.addV('person').property('id', 'mary').property('firstName', 'Mary').property('lastName', 'Andersen').property('age', 39).property('pk', 'pk')" },
             { "AddVertex 3",    "g.addV('person').property('id', 'ben').property('firstName', 'Ben').property('lastName', 'Miller').property('pk', 'pk')" },
             { "AddVertex 4",    "g.addV('person').property('id', 'robin').property('firstName', 'Robin').property('lastName', 'Wakefield').property('pk', 'pk')" },
-        //    { "AddEdge 1",      "g.V('thomas').addE('knows').to(g.V('mary'))" },
-        //    { "AddEdge 2",      "g.V('thomas').addE('knows').to(g.V('ben'))" },
-        //    { "AddEdge 3",      "g.V('ben').addE('knows').to(g.V('robin'))" },
-        //    { "UpdateVertex",   "g.V('thomas').property('age', 44)" },
-              { "CountVertices",  "g.V().count()" },
-              { "Filter Range",   "g.V().hasLabel('person').has('age', gt(40))" },
-              { "Project",        "g.V().hasLabel('person').values('firstName')" },
-              { "Sort",           "g.V().hasLabel('person').order().by('firstName', decr)" },
-              { "Traverse",       "g.V('thomas').out('knows').hasLabel('person')" },
-              { "Traverse",       "g.V('Alex').out('knows').hasLabel('person')" },
+            { "AddEdge 1",      "g.V('thomas').addE('knows').to(g.V('mary'))" },
+            { "AddEdge 2",      "g.V('thomas').addE('knows').to(g.V('ben'))" },
+            { "AddEdge 3",      "g.V('ben').addE('knows').to(g.V('robin'))" },
+            { "UpdateVertex",   "g.V('thomas').property('age', 44)" },
+             { "CountVertices",  "g.V().count()" },
+             { "Filter Range",   "g.V().hasLabel('person').has('age', gt(40))" },
+             { "Project",        "g.V().hasLabel('person').values('firstName')" },
+             { "Sort",           "g.V().hasLabel('person').order().by('firstName', decr)" },
+             { "Traverse",       "g.V('thomas').out('knows').hasLabel('person')" },
              { "Traverse 2x",    "g.V('thomas').out('knows').hasLabel('person').out('knows').hasLabel('person')" },
-       //     { "Loop",           "g.V('thomas').repeat(out()).until(has('id', 'robin')).path()" },
+             { "Loop",           "g.V('thomas').repeat(out()).until(has('id', 'robin')).path()" },
        //     { "DropEdge",       "g.V('thomas').outE('knows').where(inV().has('id', 'mary')).drop()" },
-       //     { "CountEdges",     "g.E().count()" },
+            { "CountEdges",     "g.E().count()" },
           //  { "DropVertex",     "g.V('thomas').drop()" },
         };
         // </defineQueries>
@@ -114,8 +113,6 @@ namespace GremlinNetSample
 
        
    
-
-
 
             // <defineClientandServerObjects>
             //string containerLink = "/dbs/" + Database + "/colls/" + Container;
