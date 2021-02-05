@@ -38,7 +38,15 @@
           "dependencies": {
             "Gremlin.Net": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[3.4.10, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
             }
           },
           "imports": [

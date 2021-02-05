@@ -1,0 +1,16 @@
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/obj/Debug/netcoreapp3.1/GremlinNetSample.csprojAssemblyReference.cache
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/obj/Debug/netcoreapp3.1/GremlinNetSample.AssemblyInfoInputs.cache
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/obj/Debug/netcoreapp3.1/GremlinNetSample.AssemblyInfo.cs
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/obj/Debug/netcoreapp3.1/GremlinNetSample.csproj.CoreCompileInputs.cache
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/bin/Debug/netcoreapp3.1/GremlinNetSample.deps.json
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/bin/Debug/netcoreapp3.1/GremlinNetSample.runtimeconfig.json
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/bin/Debug/netcoreapp3.1/GremlinNetSample.runtimeconfig.dev.json
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/bin/Debug/netcoreapp3.1/GremlinNetSample.dll
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/bin/Debug/netcoreapp3.1/GremlinNetSample.pdb
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/bin/Debug/netcoreapp3.1/Gremlin.Net.dll
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/bin/Debug/netcoreapp3.1/Polly.dll
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/obj/Debug/netcoreapp3.1/GremlinNetSample.csproj.CopyComplete
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/obj/Debug/netcoreapp3.1/GremlinNetSample.dll
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/obj/Debug/netcoreapp3.1/GremlinNetSample.pdb
+/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/obj/Debug/netcoreapp3.1/GremlinNetSample.genruntimeconfig.cache
