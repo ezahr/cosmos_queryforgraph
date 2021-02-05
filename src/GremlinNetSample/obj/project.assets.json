@@ -196,19 +196,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/osx/.nuget/packages/": {}
+    "C:\\Users\\boscp08\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/GremlinNetSample.csproj",
+      "projectUniqueName": "C:\\Users\\boscp08\\Projects\\scratch\\virtual-insanity\\cosmos_queryforgraph\\src\\GremlinNetSample\\GremlinNetSample.csproj",
       "projectName": "GremlinNetSample",
-      "projectPath": "/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/GremlinNetSample.csproj",
-      "packagesPath": "/Users/osx/.nuget/packages/",
-      "outputPath": "/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/obj/",
+      "projectPath": "C:\\Users\\boscp08\\Projects\\scratch\\virtual-insanity\\cosmos_queryforgraph\\src\\GremlinNetSample\\GremlinNetSample.csproj",
+      "packagesPath": "C:\\Users\\boscp08\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\boscp08\\Projects\\scratch\\virtual-insanity\\cosmos_queryforgraph\\src\\GremlinNetSample\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/osx/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\boscp08\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -258,7 +262,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.405/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.405\\RuntimeIdentifierGraph.json"
       }
     }
   }
