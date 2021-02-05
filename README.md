@@ -8,6 +8,81 @@
 
 [azure-cosmos-db-create-graph-dotnet](https://docs.microsoft.com/en-us/azure/cosmos-db/create-graph-dotnet)
 
+     # define your feedback here
+//                    
+//                    # Variables for Gremlin API resources
+//                    UNIQUEID=$RANDOM    
+//                    RESOURCEGROUPNAME='rg_cosmos-delhaye'  #'Group-10770'  #    "Group-$UNIQUEID"
+//                    LOCATION='germanywestcentral'      # az account list-LOCATIONs -o table
+//                    COSMOSDB_ACCOUNTNAME='cosmos-delhaye'       ##"cosmos-$UNIQUEID" #needs to be lower case  https://portal.azure.com/#@boschpeteroutlook.onmicrosoft.com/resource/subscriptions/87d504e9-46e8-4b87-8f72-f207ee8e6dad/resourceGroups/Group-10770/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-10770
+//                    COSMOSDB_DATABASENAME='delhayeDB'
+//                    COSMOSDB_GRAPHNAME='PeopleGraph'
+
+
+
+ //                   ##################################################################
+ //                   # Purpose: # Create a Gremlin graph
+ //                   # Arguments:
+ //                   # Return:
+ //                   ##################################################################
+ //                   Create-a-Gremlin-graph(){
+ //                   
+ //                   # Define the index policy for the graph, include spatial and composite indexes
+ //                   idxpolicy=$(cat << EOF 
+ //                   {
+ //                       "indexingMode": "consistent", 
+ //                       "includedPaths": [
+ //                           {"path": "/*"}
+ //                       ],
+ //                       "excludedPaths": [
+ //                           { "path": "/headquarters/employees/?"}
+ //                       ],
+ //                       "spatialIndexes": [
+ //                           {"path": "/*", "types": ["Point"]}
+ //                       ],
+ //                       "compositeIndexes":[
+ //                           [
+ //                               { "path":"/name", "order":"ascending" },
+ //                               { "path":"/age", "order":"descending" }
+ //                           ]
+ //                       ]
+ //                   }
+ //                   EOF
+ //                   )
+ //                   # Persist index policy to json file
+ //                   echo "$idxpolicy" > "idxpolicy-$UNIQUEID.json"
+ //                   
+ //                   az cosmosdb gremlin graph create \
+ //                       -a $COSMOSDB_ACCOUNTNAME \
+ //                       -g $RESOURCEGROUPNAME \
+ //                       -d $COSMOSDB_DATABASENAME \
+ //                       -n $COSMOSDB_GRAPHNAME \
+ //                       -p '/pk' \
+ //                       --throughput 400 \
+ //                       --idx @idxpolicy-$UNIQUEID.json
+ //                   
+ //                   # Clean up temporary index policy file
+ //                   rm -f "idxpolicy-$UNIQUEID.json"
+ //                   
+ //                   }
+ //                   
+ //                   
+ //                   ##################################################################
+ //                   # Purpose: # Create a Gremlin graph
+ //                   # Arguments:
+ //                   # Return:
+ //                   ##################################################################
+ //                   Delete-a-Gremlin-graph(){
+ //                   
+ //                   az cosmosdb gremlin graph delete \
+ //                       -a $COSMOSDB_ACCOUNTNAME \
+ //                       -g $RESOURCEGROUPNAME \
+ //                       -d $COSMOSDB_DATABASENAME \
+ //                       -n $COSMOSDB_GRAPHNAME 
+ //                   
+ //                   }
+
+
 ````
    private static Dictionary<string, string> gremlinQueries = new Dictionary<string, string>
         {
