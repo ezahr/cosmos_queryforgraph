@@ -4,6 +4,7 @@
 ## azure-cosmos-db-create-graph-dotnet
 
 ![hoeken en randen](.//pictures/hello_vertexes_and_edges_nice_to_see_you_55.png)
+![hoeken en randen](.//pictures/hello_vertexes_and_edges_nice_to_see_you_58.png)
 
 [azure-cosmos-db-create-graph-dotnet](https://docs.microsoft.com/en-us/azure/cosmos-db/create-graph-dotnet)
 
