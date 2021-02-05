@@ -1,5 +1,5 @@
 ﻿
-// [azure-cosmos-db-create-graph-dotnet](https://docs.microsoft.com/en-us/azure/cosmos-db/create-graph-dotnet)
+// 202010205 azure-cosmos-db-create-graph-dotnet](https://docs.microsoft.com/en-us/azure/cosmos-db/create-graph-dotnet)
 using System;
 using System.Collections.Generic;
 using System.Net.WebSockets;
@@ -26,10 +26,13 @@ namespace GremlinNetSample
         //export ContainerName='PeopleGraph
         
         
-        private static string Host => Environment.GetEnvironmentVariable("Host") ?? throw new ArgumentException("Missing env var: Host");
-        private static string PrimaryKey => Environment.GetEnvironmentVariable("PrimaryKey") ?? throw new ArgumentException("Missing env var: PrimaryKey");
-        private static string Database => Environment.GetEnvironmentVariable("DatabaseName") ?? throw new ArgumentException("Missing env var: DatabaseName");
-        private static string Container => Environment.GetEnvironmentVariable("ContainerName") ?? throw new ArgumentException("Missing env var: ContainerName");
+       // private static string Host => Environment.GetEnvironmentVariable("Host") ?? throw new ArgumentException("Missing env var: Host");
+       // private static string PrimaryKey => Environment.GetEnvironmentVariable("PrimaryKey") ?? throw new ArgumentException("Missing env var: PrimaryKey");
+       // private static string Database =");
+       // private static string Container => Environment.GetEnvironmentVariable("ContainerName") ?? throw new ArgumentException("Missing env var: ContainerName");
+
+
+ 
 
         private static bool EnableSSL
         {
@@ -83,36 +86,44 @@ namespace GremlinNetSample
             // { "AddEdge 2",       "g.V().hasLabel('person').has('firstName', 'Alex').addE('knows').to(g.V().hasLabel('person').has('firstName', 'Mike')" },
        
         
-
             { "AddVertex 1",    "g.addV('person').property('id', 'thomas').property('firstName', 'Thomas').property('age', 44).property('pk', 'pk')" },
             { "AddVertex 2",    "g.addV('person').property('id', 'mary').property('firstName', 'Mary').property('lastName', 'Andersen').property('age', 39).property('pk', 'pk')" },
             { "AddVertex 3",    "g.addV('person').property('id', 'ben').property('firstName', 'Ben').property('lastName', 'Miller').property('pk', 'pk')" },
             { "AddVertex 4",    "g.addV('person').property('id', 'robin').property('firstName', 'Robin').property('lastName', 'Wakefield').property('pk', 'pk')" },
-        //    { "AddEdge 1",      "g.V('thomas').addE('knows').to(g.V('mary'))" },
-        //    { "AddEdge 2",      "g.V('thomas').addE('knows').to(g.V('ben'))" },
-        //    { "AddEdge 3",      "g.V('ben').addE('knows').to(g.V('robin'))" },
-        //    { "UpdateVertex",   "g.V('thomas').property('age', 44)" },
-              { "CountVertices",  "g.V().count()" },
-              { "Filter Range",   "g.V().hasLabel('person').has('age', gt(40))" },
-              { "Project",        "g.V().hasLabel('person').values('firstName')" },
-         //     { "Traverse",       "g.V().hasLabel('person').has('firstName', 'Alex').outE('knows').inV().hasLabel('person')" },
-              { "Sort",           "g.V().hasLabel('person').order().by('firstName', decr)" },
-             // { "Traverse",       "g.V('thomas').out('knows').hasLabel('person')" },
-      //         { "Traverse",       "g.V('Alex').out('knows').hasLabel('person')" },
-       //     { "Traverse 2x",    "g.V('thomas').out('knows').hasLabel('person').out('knows').hasLabel('person')" },
-       //     { "Loop",           "g.V('thomas').repeat(out()).until(has('id', 'robin')).path()" },
+            { "AddEdge 1",      "g.V('thomas').addE('knows').to(g.V('mary'))" },
+            { "AddEdge 2",      "g.V('thomas').addE('knows').to(g.V('ben'))" },
+            { "AddEdge 3",      "g.V('ben').addE('knows').to(g.V('robin'))" },
+            { "UpdateVertex",   "g.V('thomas').property('age', 44)" },
+             { "CountVertices",  "g.V().count()" },
+             { "Filter Range",   "g.V().hasLabel('person').has('age', gt(40))" },
+             { "Project",        "g.V().hasLabel('person').values('firstName')" },
+             { "Sort",           "g.V().hasLabel('person').order().by('firstName', decr)" },
+             { "Traverse",       "g.V('thomas').out('knows').hasLabel('person')" },
+             { "Traverse 2x",    "g.V('thomas').out('knows').hasLabel('person').out('knows').hasLabel('person')" },
+             { "Loop",           "g.V('thomas').repeat(out()).until(has('id', 'robin')).path()" },
        //     { "DropEdge",       "g.V('thomas').outE('knows').where(inV().has('id', 'mary')).drop()" },
-       //     { "CountEdges",     "g.E().count()" },
-            { "DropVertex",     "g.V('thomas').drop()" },
+            { "CountEdges",     "g.E().count()" },
+          //  { "DropVertex",     "g.V('thomas').drop()" },
         };
         // </defineQueries>
 
         // Starts a console application that executes every Gremlin query in the gremlinQueries dictionary. 
         static void Main(string[] args)
         {
+
+       
+   
+
             // <defineClientandServerObjects>
-            string containerLink = "/dbs/" + Database + "/colls/" + Container;
+            //string containerLink = "/dbs/" + Database + "/colls/" + Container;
+
+           string containerLink = "/dbs/" + "delhayeDB" + "/colls/" + "PeopleGraph";
+           string Host="cosmos-delhaye.gremlin.cosmosdb.azure.com" ;
+           string PrimaryKey = "FwJGHzl5Mh6oD3idgDqTev5XS7CnEkKjsp24T61tFlzSS2ydpQBRBejhZyHndOFpB8rXOsoNuXLSkSdDHdbAOA==";
+
+
             Console.WriteLine($"Connecting to: host: {Host}, port: {Port}, container: {containerLink}, ssl: {EnableSSL}");
+
             var gremlinServer = new GremlinServer(Host, Port, enableSsl: EnableSSL, 
                                                     username: containerLink, 
                                                     password: PrimaryKey);
