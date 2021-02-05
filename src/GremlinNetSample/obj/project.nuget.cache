@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "o24PIVVnMS24oEScvq6Rb78WvHzdy+yL6Q2JCX2WEWCbOYF5ZgRpEUwuWptJ1mSZN1yNY6SfmEResRJaNXjHDA==",
+  "dgSpecHash": "Y+8cPzE7d/2PkG4SsjFJNoSWICki6ugiRSKQZUrT+Z0ocUgt5ZJX8mzr72es0CYKpi/gfTDq53lOWOYeQcx9jQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\boscp08\\Projects\\scratch\\virtual-insanity\\cosmos_queryforgraph\\src\\GremlinNetSample\\GremlinNetSample.csproj",
+  "projectFilePath": "/Users/osx/Projects/scratch/virtual-insanity/cosmos_queryforgraph/src/GremlinNetSample/GremlinNetSample.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\boscp08\\.nuget\\packages\\gremlin.net\\3.4.10\\gremlin.net.3.4.10.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
-    "C:\\Users\\boscp08\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
-    "C:\\Users\\boscp08\\.nuget\\packages\\polly\\7.2.0\\polly.7.2.0.nupkg.sha512"
+    "/Users/osx/.nuget/packages/gremlin.net/3.4.10/gremlin.net.3.4.10.nupkg.sha512",
+    "/Users/osx/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/osx/.nuget/packages/newtonsoft.json/11.0.2/newtonsoft.json.11.0.2.nupkg.sha512",
+    "/Users/osx/.nuget/packages/polly/7.2.0/polly.7.2.0.nupkg.sha512"
   ],
   "logs": []
 }
